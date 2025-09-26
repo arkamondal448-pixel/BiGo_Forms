@@ -1,6 +1,6 @@
 const form = document.getElementById('handoverForm');
 const status = document.getElementById('successMessage');
-const submitBtn = form.querySelector('button[type="submit"]'); // ✅ define submit button
+
 
 const vehicleSpeed = document.getElementById('vehicleSpeed');
 const licenseGroup = document.getElementById('licenseGroup');
@@ -92,10 +92,7 @@ form.addEventListener('submit', e => {
         .catch(err => {
             status.innerText = 'Error: ' + err.message;
         })
-        .finally(() => {
-            // Re-enable button after everything is done
-            submitBtn.disabled = false;
-            submitBtn.innerText = "Submit";
-        });
+        
     });
 });
+
