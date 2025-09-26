@@ -12,7 +12,7 @@ experience.addEventListener("change", () => {
   }
 });
 
-form.addEventListener('submit', e => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const fileInput = document.getElementById('cv');
