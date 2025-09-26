@@ -1,7 +1,13 @@
 const form = document.getElementById('interviewForm');
-const status = document.getElementById('status');
 const experience = document.getElementById('experience');
 const extraFields = document.getElementById('extraFields');
+
+// 🔹 dynamically create status element
+let status = document.createElement("p");
+status.id = "status";
+status.style.marginTop = "10px";
+status.style.fontWeight = "bold";
+form.appendChild(status);
 
 // 🔹 Show/hide extra fields when experience changes
 experience.addEventListener("change", () => {
@@ -12,11 +18,16 @@ experience.addEventListener("change", () => {
   }
 });
 
-form.addEventListener("submit", async (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const fileInput = document.getElementById('cv');
   const file = fileInput.files[0];
+
+  if (!file) {
+    status.innerText = "⚠️ Please upload your CV before submitting.";
+    return;
+  }
 
   const reader = new FileReader();
   reader.onload = function(event) {
@@ -47,12 +58,12 @@ form.addEventListener("submit", async (e) => {
     })
     .then(response => response.json())
     .then(result => {
-      status.innerText = result.message || "CV uploaded successfully!";
+      status.innerText = result.message || "✅ CV uploaded successfully!";
       form.reset();
-      extraFields.classList.add("hidden"); // reset hidden state after submit
+      extraFields.classList.add("hidden"); // reset hidden state
     })
     .catch(err => {
-      status.innerText = 'Error: ' + err.message;
+      status.innerText = '❌ Error: ' + err.message;
     });
   };
 
