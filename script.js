@@ -41,7 +41,7 @@ if ( purpose === "training" ) {
 }else if (purpose === "accessories") {
    window.location.href = "accessories.html";
 }else if (purpose === "interview") {
-   window.location.href = "interview.html";
+   window.location.href = "inerview.html";
 }
  else {
     alert("✅ Reception data saved!");
@@ -56,3 +56,4 @@ form.reset();
 otherPurposeGroup.classList.add("hidden");
 });
 });
+
