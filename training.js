@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const previousJobGroup = document.getElementById("previousJobGroup");
   const submitBtn = form.querySelector('button[type="submit"]'); // ✅ define submit button
 
-  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwMC3no_08ZawTanj2ZmvSFgFAmhNIqv2fNcTdx1BtkJjS1ex7b5i9Uay4IgPlL4-Kdcg/exec"; // 🔹 replace
+  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzGvzNnfwcHg_K1lccWt_hqPBLhFs4WU7Ir6cZok3yc68Gz5IQfrC0nGKvIfbqUFMCfUg/exec"; // 🔹 replace
 
   // Show/hide Previous Job
   trainingTypeSelect.addEventListener("change", () => {
@@ -51,3 +51,4 @@ document.addEventListener("DOMContentLoaded", () => {
             submitBtn.innerText = "Submit";
         });
     });
+
