@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const purposeSelect = document.getElementById("purpose");
   const otherPurposeGroup = document.getElementById("otherPurposeGroup");
 
-  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzGvzNnfwcHg_K1lccWt_hqPBLhFs4WU7Ir6cZok3yc68Gz5IQfrC0nGKvIfbqUFMCfUg/exec"; // 🔹 replace
+  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwL4jdLabiXs6ZEucpWwX_Jo7-nQSiCa4GI-WZ3lKwyzs5-kRAG8vcXG6GJuzJS2H-Y/exec"; // 🔹 replace
 
   purposeSelect.addEventListener("change", () => {
     if (purposeSelect.value === "other") otherPurposeGroup.classList.remove("hidden");
@@ -56,5 +56,6 @@ form.reset();
 otherPurposeGroup.classList.add("hidden");
 });
 });
+
 
 
