@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxavoZpVMjt5GxNW83NSXm7E_wv2pYt08dx4HB8os3OxiK6AKG1wYY-jFvciCqhwkXh4Q/exec";
+  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwL4jdLabiXs6ZEucpWwX_Jo7-nQSiCa4GI-WZ3lKwyzs5-kRAG8vcXG6GJuzJS2H-Y/exec";
 
   const phoneCheckForm = document.getElementById("phoneCheckForm");
   const trainingForm = document.getElementById("trainingForm");
